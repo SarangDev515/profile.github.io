@@ -3,214 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Sarang T — Python and Odoo Developer, ERP Specialist, Django and API Integrator." />
+  <meta name="description" content="Sarang T — Python–Odoo Developer and ERP Application Developer." />
   <title>Sarang T | Python–Odoo Developer</title>
   <style>
     :root {
-      --ink: #172033;
-      --muted: #5d687b;
-      --accent: #1b5e8c;
-      --accent-dark: #123f61;
-      --line: #d8e0e8;
-      --soft: #f3f7fa;
+      --ink: #202b38;
+      --muted: #65717e;
+      --accent: #1f4e79;
+      --line: #d9e0e6;
       --paper: #ffffff;
-      --bg: #e8eef3;
+      --page: #f3f5f7;
+      --soft: #f8fafb;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
-      background: linear-gradient(135deg, #dfe8ef, #f7f9fb 48%, #dfe8ef);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
+      background: var(--page);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
     }
     .resume {
-      max-width: 1040px;
-      margin: 34px auto;
+      width: min(100% - 32px, 1080px);
+      margin: 32px auto;
       background: var(--paper);
-      box-shadow: 0 22px 70px rgba(24, 45, 64, .16);
-      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(32, 43, 56, .08);
     }
-    .hero {
-      position: relative;
-      padding: 58px 72px 46px;
-      color: #fff;
-      background: linear-gradient(125deg, #102d46, #1d628f 58%, #2d86a8);
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: .14;
-      background-image: radial-gradient(#fff 1px, transparent 1px);
-      background-size: 18px 18px;
-      mask-image: linear-gradient(90deg, #000, transparent 75%);
-      pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 1; }
-    .eyebrow {
-      margin: 0 0 10px;
-      color: #a9d8ee;
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
+    header {
+      padding: 42px 54px 30px;
+      border-bottom: 3px solid var(--accent);
     }
     h1 {
       margin: 0;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      line-height: 1;
-      letter-spacing: .03em;
+      color: #162536;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: .08em;
+      line-height: 1.1;
     }
     .headline {
-      margin: 17px 0 24px;
-      color: #e1f1f8;
-      font-size: 1.18rem;
-      font-weight: 600;
+      margin: 10px 0 18px;
+      color: var(--accent);
+      font-size: 1.12rem;
+      font-weight: 700;
     }
-    .hero-contact {
+    .contact-line {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 22px;
-      margin: 0;
-      color: #f0f8fc;
-      font-size: .93rem;
+      gap: 5px 18px;
+      color: var(--muted);
+      font-size: .92rem;
     }
-    .hero-contact a { color: inherit; text-decoration: none; }
-    .hero-contact a:hover { text-decoration: underline; }
-    .layout {
+    .contact-line a { color: var(--accent); text-decoration: none; }
+    .contact-line a:hover { text-decoration: underline; }
+    .content {
       display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(250px, .85fr);
+      grid-template-columns: minmax(0, 1.65fr) minmax(250px, .85fr);
     }
-    main { padding: 44px 52px 56px 72px; }
+    main { padding: 38px 48px 52px 54px; }
     aside {
-      padding: 44px 42px 56px 32px;
+      padding: 38px 38px 52px 30px;
       background: var(--soft);
       border-left: 1px solid var(--line);
     }
-    section { margin: 0 0 38px; }
+    section { margin-bottom: 34px; }
     section:last-child { margin-bottom: 0; }
     h2 {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 18px;
-      color: var(--accent-dark);
+      margin: 0 0 15px;
+      padding-bottom: 7px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
       font-size: 1rem;
-      letter-spacing: .13em;
+      font-weight: 700;
+      letter-spacing: .12em;
       text-transform: uppercase;
     }
-    h2::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: var(--line);
-    }
-    .summary {
-      margin: 0;
-      color: #39465a;
-      font-size: 1.03rem;
-    }
-    .entry { margin: 0 0 28px; }
+    p { margin: 0 0 10px; }
+    .summary { color: #3d4a56; }
+    .entry { margin-bottom: 25px; }
     .entry:last-child { margin-bottom: 0; }
-    .entry-title { margin: 0; font-size: 1.04rem; font-weight: 800; }
-    .entry-meta { margin: 3px 0 9px; color: var(--accent); font-size: .9rem; font-weight: 700; }
-    ul { margin: 8px 0 0; padding-left: 20px; color: #3c4859; }
-    li { margin: 5px 0; }
-    .skill-list, .compact-list { list-style: none; padding: 0; margin: 0; }
-    .skill-list li, .compact-list li { margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
-    .skill-list li:last-child, .compact-list li:last-child { border-bottom: 0; }
-    .skill-label { display: block; margin-bottom: 2px; color: var(--accent-dark); font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-    .skill-value { color: #485568; font-size: .92rem; }
-    .project-title { margin: 16px 0 3px; color: var(--accent-dark); font-weight: 800; }
-    .project-title:first-child { margin-top: 0; }
-    .education-item { margin-bottom: 16px; }
-    .education-item:last-child { margin-bottom: 0; }
-    .education-item strong { display: block; }
-    .education-item span { color: var(--muted); font-size: .9rem; }
+    .entry-title { margin: 0; font-weight: 700; }
+    .entry-meta { margin: 3px 0 8px; color: var(--muted); font-size: .9rem; }
+    ul { margin: 6px 0 0; padding-left: 20px; color: #3d4a56; }
+    li { margin: 4px 0; }
+    .project { margin-bottom: 14px; }
+    .project:last-child { margin-bottom: 0; }
+    .project strong { color: #263f58; }
+    .side-list { list-style: none; margin: 0; padding: 0; }
+    .side-list li { padding: 8px 0; border-bottom: 1px solid var(--line); color: #465360; }
+    .side-list li:last-child { border-bottom: 0; }
+    .label { display: block; color: #263f58; font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .education { margin-bottom: 17px; }
+    .education:last-child { margin-bottom: 0; }
+    .education strong { display: block; }
+    .education span { color: var(--muted); font-size: .9rem; }
     .contact-menu {
       position: fixed;
-      right: 26px;
-      bottom: 26px;
-      z-index: 20;
+      right: 24px;
+      bottom: 24px;
+      z-index: 10;
     }
     .contact-menu summary {
       display: grid;
-      width: 60px;
-      height: 60px;
+      width: 56px;
+      height: 56px;
       place-items: center;
       color: #fff;
       background: var(--accent);
-      border: 4px solid rgba(255,255,255,.9);
+      border: 0;
       border-radius: 50%;
-      box-shadow: 0 10px 26px rgba(18, 63, 97, .34);
+      box-shadow: 0 6px 18px rgba(31, 78, 121, .28);
       cursor: pointer;
       list-style: none;
-      transition: transform .2s ease, background .2s ease;
     }
     .contact-menu summary::-webkit-details-marker { display: none; }
-    .contact-menu summary:hover { background: var(--accent-dark); transform: translateY(-2px); }
-    .contact-menu[open] summary { transform: rotate(45deg); background: var(--accent-dark); }
-    .contact-menu svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .contact-menu summary:hover { background: #173b5c; }
+    .contact-menu[open] summary { background: #173b5c; }
+    .contact-menu svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
     .contact-links {
       position: absolute;
       right: 0;
-      bottom: 72px;
+      bottom: 67px;
       display: grid;
-      min-width: 160px;
-      padding: 7px;
+      min-width: 145px;
+      padding: 6px;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 13px;
-      box-shadow: 0 14px 35px rgba(20, 38, 54, .2);
+      box-shadow: 0 8px 22px rgba(32, 43, 56, .16);
     }
     .contact-links a {
-      padding: 10px 13px;
-      border-radius: 8px;
+      padding: 9px 12px;
       color: var(--ink);
       font-weight: 700;
       text-decoration: none;
-      white-space: nowrap;
     }
-    .contact-links a:hover { color: var(--accent-dark); background: var(--soft); }
-    @media (max-width: 800px) {
-      .resume { margin: 0; }
-      .hero { padding: 42px 28px 34px; }
-      .layout { display: block; }
-      main, aside { padding: 34px 28px; }
+    .contact-links a:hover { color: var(--accent); background: var(--soft); }
+    @media (max-width: 760px) {
+      .resume { width: 100%; margin: 0; border: 0; }
+      header { padding: 32px 24px 25px; }
+      .content { display: block; }
+      main, aside { padding: 30px 24px 38px; }
       aside { border-top: 1px solid var(--line); border-left: 0; }
     }
     @media print {
       body { background: #fff; }
-      .resume { margin: 0; box-shadow: none; }
+      .resume { width: 100%; margin: 0; border: 0; box-shadow: none; }
       .contact-menu { display: none; }
     }
   </style>
 </head>
 <body>
   <article class="resume">
-    <header class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Python · Odoo · ERP · Automation</p>
-        <h1>SARANG T</h1>
-        <p class="headline">Python–Odoo Developer | ERP Specialist | Django &amp; API Integrator</p>
-        <div class="hero-contact" aria-label="Primary contact details">
-          <a href="tel:+919526815422">+91 9526815422</a>
-          <a href="mailto:sarusarang02@gmail.com">sarusarang02@gmail.com</a>
-          <span>Kannur, Kerala, India</span>
-          <a href="https://www.linkedin.com/in/sarang-t-odoo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+    <header>
+      <h1>SARANG T</h1>
+      <p class="headline">Python–Odoo Developer | ERP Specialist | Django &amp; API Integrator</p>
+      <div class="contact-line">
+        <a href="tel:+919526815422">+91 9526815422</a>
+        <a href="mailto:sarusarang02@gmail.com">sarusarang02@gmail.com</a>
+        <span>Kannur, Kerala, India</span>
+        <a href="https://www.linkedin.com/in/sarang-t-odoo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </header>
-
-    <div class="layout">
+    <div class="content">
       <main>
         <section>
           <h2>Professional Summary</h2>
           <p class="summary">Python–Odoo Developer with hands-on experience in ERP customization, module development, workflow automation, and third-party API integration across Odoo 12, 13, 15, 16, 18 &amp; 19. Strong expertise in Python, PostgreSQL, XML, and ERP business workflows across healthcare, retail, HR, finance, and hospitality domains. Focused on delivering scalable, efficient, and business-driven ERP solutions.</p>
         </section>
-
         <section>
           <h2>Professional Experience</h2>
           <div class="entry">
@@ -235,54 +196,43 @@
             </ul>
           </div>
         </section>
-
         <section>
           <h2>Key Projects · Odoo ERP</h2>
-          <p class="project-title">Healthcare Systems</p>
-          <p>Laboratory, pharmacy, and hospital management covering patients, billing, inventory, reports, and access control.</p>
-          <p class="project-title">HCM</p>
-          <p>Employee records, attendance, leave management, and approval workflows.</p>
-          <p class="project-title">Co-operative Society Software</p>
-          <p>Member management, loans, savings, and financial workflows.</p>
-          <p class="project-title">Retail &amp; Hospitality</p>
-          <p>Hypermarket POS and inventory, hotel booking, and billing systems.</p>
-          <p class="project-title">Parks Management</p>
-          <p>Ticketing, visitor management, billing, reports, and role-based access control.</p>
-          <p class="summary" style="margin-top:16px;font-size:.94rem;"><strong>Common focus:</strong> custom modules, workflow automation, reports, and role-based security.</p>
+          <div class="project"><strong>Healthcare Systems:</strong> Laboratory, pharmacy, and hospital management covering patients, billing, inventory, reports, and access control.</div>
+          <div class="project"><strong>HCM:</strong> Employee records, attendance, leave management, and approval workflows.</div>
+          <div class="project"><strong>Co-operative Society Software:</strong> Member management, loans, savings, and financial workflows.</div>
+          <div class="project"><strong>Retail &amp; Hospitality:</strong> Hypermarket POS and inventory, hotel booking, and billing systems.</div>
+          <div class="project"><strong>Parks Management:</strong> Ticketing, visitor management, billing, reports, and role-based access control.</div>
         </section>
       </main>
-
       <aside>
         <section>
           <h2>Skills</h2>
-          <ul class="skill-list">
-            <li><span class="skill-label">Languages</span><span class="skill-value">Python, JavaScript</span></li>
-            <li><span class="skill-label">ERP &amp; Frameworks</span><span class="skill-value">Odoo (12–19), Django, REST API</span></li>
-            <li><span class="skill-label">Frontend</span><span class="skill-value">XML, HTML, CSS, Bootstrap</span></li>
-            <li><span class="skill-label">Database</span><span class="skill-value">PostgreSQL</span></li>
-            <li><span class="skill-label">Tools</span><span class="skill-value">Git, GitHub, PyCharm, VS Code</span></li>
-            <li><span class="skill-label">Strengths</span><span class="skill-value">Problem solving, logical thinking, team collaboration</span></li>
+          <ul class="side-list">
+            <li><span class="label">Languages</span>Python, JavaScript</li>
+            <li><span class="label">ERP &amp; Frameworks</span>Odoo (12–19), Django, REST API</li>
+            <li><span class="label">Frontend</span>XML, HTML, CSS, Bootstrap</li>
+            <li><span class="label">Database</span>PostgreSQL</li>
+            <li><span class="label">Tools</span>Git, GitHub, PyCharm, VS Code</li>
+            <li><span class="label">Strengths</span>Problem solving, logical thinking, team collaboration</li>
           </ul>
         </section>
-
         <section>
           <h2>Training &amp; Certifications</h2>
-          <ul class="compact-list">
+          <ul class="side-list">
             <li>Optical Fiber Technology &amp; FTTH — BSNL RTTC</li>
             <li>Geospatial Applications for Disaster Risk Management — Basic &amp; Advanced</li>
             <li>Prompt Engineering Workshop</li>
           </ul>
         </section>
-
         <section>
           <h2>Education</h2>
-          <div class="education-item"><strong>Diploma in Electronics &amp; Communication Engineering</strong><span>EKNMMPTC, Kannur, Kerala · 2022</span></div>
-          <div class="education-item"><strong>Higher Secondary · Biology Science</strong><span>EMSSGHSS Pappinisseri, Kannur, Kerala · 2019</span></div>
+          <div class="education"><strong>Diploma in Electronics &amp; Communication Engineering</strong><span>EKNMMPTC, Kannur, Kerala · 2022</span></div>
+          <div class="education"><strong>Higher Secondary · Biology Science</strong><span>EMSSGHSS Pappinisseri, Kannur, Kerala · 2019</span></div>
         </section>
       </aside>
     </div>
   </article>
-
   <details class="contact-menu">
     <summary aria-label="Open contact options" title="Contact Sarang">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.12 2.8 2 2 0 0 1 3.11.62h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.66 2.62a2 2 0 0 1-.45 2.11L7.05 8.34a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.32 1.72.54 2.62.66A2 2 0 0 1 21 15.5Z"/></svg>
