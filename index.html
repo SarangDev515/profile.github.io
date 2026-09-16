@@ -141,11 +141,20 @@
     }
     .contact-links a:hover { color: var(--accent); background: var(--soft); }
     @media (max-width: 760px) {
-      .resume { width: 100%; margin: 0; border: 0; }
-      header { padding: 32px 24px 25px; }
+      body { font-size: 14px; background: #fff; }
+      .resume { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      header { padding: 30px 22px 24px; }
+      h1 { font-size: 2rem; letter-spacing: .06em; }
+      .headline { margin: 8px 0 14px; font-size: 1rem; }
+      .contact-line { gap: 4px 12px; font-size: .84rem; }
       .content { display: block; }
-      main, aside { padding: 30px 24px 38px; }
+      main, aside { padding: 28px 22px 34px; }
       aside { border-top: 1px solid var(--line); border-left: 0; }
+      section { margin-bottom: 29px; }
+      h2 { margin-bottom: 12px; font-size: .9rem; }
+      .summary { font-size: .95rem; }
+      .entry { margin-bottom: 22px; }
+      .contact-menu { right: 16px; bottom: 16px; }
     }
     @media print {
       body { background: #fff; }
