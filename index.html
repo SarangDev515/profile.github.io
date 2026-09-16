@@ -1,302 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>SARANG T - Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background: #eaeaea;
-        margin: 0;
-        padding: 20px 0;
-      }
-
-      .page {
-        width: 794px; /* A4 width */
-        min-height: 1123px; /* A4 height */
-        margin: auto;
-        background: #fff;
-        padding: 40px 40px 35px;
-        color: #000;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        font-size: 14px;
-        line-height: 1.4;
-      }
-
-      h1 {
-        font-size: 26px;
-        margin: 0 0 12px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
-      }
-
-      h2 {
-        font-size: 18px;
-        margin: 22px 0 8px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 4px;
-      }
-
-      p,
-      li {
-        margin: 4px 0;
-      }
-
-      ul {
-        padding-left: 20px;
-        margin: 6px 0 12px;
-      }
-
-      .section {
-        margin-bottom: 22px;
-      }
-
-      .contact {
-        margin-bottom: 28px;
-        text-align: center;
-        font-size: 15px;
-      }
-
-      .contact a {
-        color: #000;
-        text-decoration: none;
-      }
-
-      .contact a:hover {
-        text-decoration: underline;
-      }
-
-      .role {
-        font-weight: bold;
-      }
-
-      .location {
-        font-size: 13px;
-        color: #555;
-        margin-bottom: 6px;
-      }
-
-      /* Download button */
-      .download-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #000;
-        color: #fff;
-        padding: 10px 16px 10px 12px;
-        font-size: 14px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        user-select: none;
-        transition: background-color 0.3s ease;
-      }
-
-      .download-btn:hover {
-        background: #444;
-      }
-
-      /* Animated down arrow */
-      .download-icon {
-        width: 18px;
-        height: 18px;
-        stroke: #fff;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill: none;
-        animation: slideDown 1.5s infinite ease-in-out;
-      }
-
-      @keyframes slideDown {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(4px);
-        }
-      }
-
-      @media print {
-        @page {
-          size: A4;
-          margin: 15mm;
-        }
-
-        body {
-          background: none;
-          margin: 0;
-          padding: 0;
-        }
-
-        .page {
-          box-shadow: none;
-          width: auto;
-          min-height: auto;
-          margin: 0;
-          padding: 0;
-          font-size: 14px;
-          line-height: 1.4;
-        }
-
-        .download-btn {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <button
-      class="download-btn"
-      onclick="window.print()"
-      aria-label="Download PDF"
-    >
-      <svg
-        class="download-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <path d="M12 3v14M8 13l4 4 4-4" />
-      </svg>
-      Download PDF
-    </button>
-
-    <div class="page">
-      <h1>SARANG T</h1>
-      <div class="contact">
-        <p>Odoo & Python Specialist | ERP Application Developer</p>
-        <p>Kannur, Kerala, India</p>
-        <p>Email: sarang@example.com</p>
-        <p>Mob: +91 9526815422</p>
-        <p>
-          LinkedIn:
-          <a
-            href="https://linkedin.com/in/sarang-t-48691b247"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin.com/in/sarang-t-48691b247
-          </a>
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sarang T — Python and Odoo Developer, ERP Specialist, Django and API Integrator." />
+  <title>Sarang T | Python–Odoo Developer</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d687b;
+      --accent: #1b5e8c;
+      --accent-dark: #123f61;
+      --line: #d8e0e8;
+      --soft: #f3f7fa;
+      --paper: #ffffff;
+      --bg: #e8eef3;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(135deg, #dfe8ef, #f7f9fb 48%, #dfe8ef);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    .resume {
+      max-width: 1040px;
+      margin: 34px auto;
+      background: var(--paper);
+      box-shadow: 0 22px 70px rgba(24, 45, 64, .16);
+      overflow: hidden;
+    }
+    .hero {
+      position: relative;
+      padding: 58px 72px 46px;
+      color: #fff;
+      background: linear-gradient(125deg, #102d46, #1d628f 58%, #2d86a8);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .14;
+      background-image: radial-gradient(#fff 1px, transparent 1px);
+      background-size: 18px 18px;
+      mask-image: linear-gradient(90deg, #000, transparent 75%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #a9d8ee;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: .03em;
+    }
+    .headline {
+      margin: 17px 0 24px;
+      color: #e1f1f8;
+      font-size: 1.18rem;
+      font-weight: 600;
+    }
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin: 0;
+      color: #f0f8fc;
+      font-size: .93rem;
+    }
+    .hero-contact a { color: inherit; text-decoration: none; }
+    .hero-contact a:hover { text-decoration: underline; }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(250px, .85fr);
+    }
+    main { padding: 44px 52px 56px 72px; }
+    aside {
+      padding: 44px 42px 56px 32px;
+      background: var(--soft);
+      border-left: 1px solid var(--line);
+    }
+    section { margin: 0 0 38px; }
+    section:last-child { margin-bottom: 0; }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: var(--accent-dark);
+      font-size: 1rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h2::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+    .summary {
+      margin: 0;
+      color: #39465a;
+      font-size: 1.03rem;
+    }
+    .entry { margin: 0 0 28px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-title { margin: 0; font-size: 1.04rem; font-weight: 800; }
+    .entry-meta { margin: 3px 0 9px; color: var(--accent); font-size: .9rem; font-weight: 700; }
+    ul { margin: 8px 0 0; padding-left: 20px; color: #3c4859; }
+    li { margin: 5px 0; }
+    .skill-list, .compact-list { list-style: none; padding: 0; margin: 0; }
+    .skill-list li, .compact-list li { margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    .skill-list li:last-child, .compact-list li:last-child { border-bottom: 0; }
+    .skill-label { display: block; margin-bottom: 2px; color: var(--accent-dark); font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .skill-value { color: #485568; font-size: .92rem; }
+    .project-title { margin: 16px 0 3px; color: var(--accent-dark); font-weight: 800; }
+    .project-title:first-child { margin-top: 0; }
+    .education-item { margin-bottom: 16px; }
+    .education-item:last-child { margin-bottom: 0; }
+    .education-item strong { display: block; }
+    .education-item span { color: var(--muted); font-size: .9rem; }
+    .contact-menu {
+      position: fixed;
+      right: 26px;
+      bottom: 26px;
+      z-index: 20;
+    }
+    .contact-menu summary {
+      display: grid;
+      width: 60px;
+      height: 60px;
+      place-items: center;
+      color: #fff;
+      background: var(--accent);
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 50%;
+      box-shadow: 0 10px 26px rgba(18, 63, 97, .34);
+      cursor: pointer;
+      list-style: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .contact-menu summary::-webkit-details-marker { display: none; }
+    .contact-menu summary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .contact-menu[open] summary { transform: rotate(45deg); background: var(--accent-dark); }
+    .contact-menu svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .contact-links {
+      position: absolute;
+      right: 0;
+      bottom: 72px;
+      display: grid;
+      min-width: 160px;
+      padding: 7px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      box-shadow: 0 14px 35px rgba(20, 38, 54, .2);
+    }
+    .contact-links a {
+      padding: 10px 13px;
+      border-radius: 8px;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .contact-links a:hover { color: var(--accent-dark); background: var(--soft); }
+    @media (max-width: 800px) {
+      .resume { margin: 0; }
+      .hero { padding: 42px 28px 34px; }
+      .layout { display: block; }
+      main, aside { padding: 34px 28px; }
+      aside { border-top: 1px solid var(--line); border-left: 0; }
+    }
+    @media print {
+      body { background: #fff; }
+      .resume { margin: 0; box-shadow: none; }
+      .contact-menu { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="resume">
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Python · Odoo · ERP · Automation</p>
+        <h1>SARANG T</h1>
+        <p class="headline">Python–Odoo Developer | ERP Specialist | Django &amp; API Integrator</p>
+        <div class="hero-contact" aria-label="Primary contact details">
+          <a href="tel:+919526815422">+91 9526815422</a>
+          <a href="mailto:sarusarang02@gmail.com">sarusarang02@gmail.com</a>
+          <span>Kannur, Kerala, India</span>
+          <a href="https://www.linkedin.com/in/sarang-t-odoo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
+    </header>
 
-      <div class="section">
-        <h2>Professional Summary</h2>
-        <p>
-          Skilled Odoo Developer specializing in customizing and optimizing ERP
-          solutions. Proficient in Python, JavaScript, SQL, and API integration.
-          Experienced in financial modules, system automation, and improving
-          organizational efficiency through tailored ERP solutions.
-        </p>
-      </div>
+    <div class="layout">
+      <main>
+        <section>
+          <h2>Professional Summary</h2>
+          <p class="summary">Python–Odoo Developer with hands-on experience in ERP customization, module development, workflow automation, and third-party API integration across Odoo 12, 13, 15, 16, 18 &amp; 19. Strong expertise in Python, PostgreSQL, XML, and ERP business workflows across healthcare, retail, HR, finance, and hospitality domains. Focused on delivering scalable, efficient, and business-driven ERP solutions.</p>
+        </section>
 
-      <div class="section">
-        <h2>Skills</h2>
-        <ul>
-          <li>Odoo Development (v12–v16)</li>
-          <li>Python, JavaScript, SQL</li>
-          <li>ERP Workflow Automation</li>
-          <li>QWeb, HTML, CSS</li>
-          <li>API Integration (RESTful)</li>
-        </ul>
-      </div>
+        <section>
+          <h2>Professional Experience</h2>
+          <div class="entry">
+            <p class="entry-title">Python–Odoo Developer | Inexoft Technologies Pvt Ltd</p>
+            <p class="entry-meta">Aug 2024 – May 2026</p>
+            <ul>
+              <li>Developed and customized Odoo modules across multiple versions (12–19).</li>
+              <li>Automated workflows to reduce manual operations and improve efficiency.</li>
+              <li>Integrated third-party APIs and optimized PostgreSQL queries.</li>
+              <li>Customized Form, Tree, and Kanban views using XML, HTML, CSS, and JavaScript.</li>
+              <li>Provided end-user support, bug fixing, and technical documentation.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <p class="entry-title">Python–Odoo Developer Intern | Business Technology Research &amp; Analytics Centre</p>
+            <p class="entry-meta">Mar 2024 – Aug 2024</p>
+            <ul>
+              <li>Built custom Odoo modules and business logic using Python and ORM.</li>
+              <li>Created views, menus, actions, and security rules.</li>
+              <li>Gained exposure to CRM, Sales, Inventory, HR, and Accounting workflows.</li>
+              <li>Used Git for version control and followed structured development practices.</li>
+            </ul>
+          </div>
+        </section>
 
-      <div class="section">
-        <h2>Professional Experience</h2>
+        <section>
+          <h2>Key Projects · Odoo ERP</h2>
+          <p class="project-title">Healthcare Systems</p>
+          <p>Laboratory, pharmacy, and hospital management covering patients, billing, inventory, reports, and access control.</p>
+          <p class="project-title">HCM</p>
+          <p>Employee records, attendance, leave management, and approval workflows.</p>
+          <p class="project-title">Co-operative Society Software</p>
+          <p>Member management, loans, savings, and financial workflows.</p>
+          <p class="project-title">Retail &amp; Hospitality</p>
+          <p>Hypermarket POS and inventory, hotel booking, and billing systems.</p>
+          <p class="project-title">Parks Management</p>
+          <p>Ticketing, visitor management, billing, reports, and role-based access control.</p>
+          <p class="summary" style="margin-top:16px;font-size:.94rem;"><strong>Common focus:</strong> custom modules, workflow automation, reports, and role-based security.</p>
+        </section>
+      </main>
 
-        <p class="role">Odoo Developer – Inexoft Technologies Pvt Ltd</p>
-        <p class="location">Aug 2024 – Present | Kannur, Kerala</p>
-        <ul>
-          <li>Customized ERP modules to match business requirements.</li>
-          <li>
-            Developed financial workflows and automated reporting features.
-          </li>
-          <li>Integrated third-party APIs to enhance system functionality.</li>
-        </ul>
+      <aside>
+        <section>
+          <h2>Skills</h2>
+          <ul class="skill-list">
+            <li><span class="skill-label">Languages</span><span class="skill-value">Python, JavaScript</span></li>
+            <li><span class="skill-label">ERP &amp; Frameworks</span><span class="skill-value">Odoo (12–19), Django, REST API</span></li>
+            <li><span class="skill-label">Frontend</span><span class="skill-value">XML, HTML, CSS, Bootstrap</span></li>
+            <li><span class="skill-label">Database</span><span class="skill-value">PostgreSQL</span></li>
+            <li><span class="skill-label">Tools</span><span class="skill-value">Git, GitHub, PyCharm, VS Code</span></li>
+            <li><span class="skill-label">Strengths</span><span class="skill-value">Problem solving, logical thinking, team collaboration</span></li>
+          </ul>
+        </section>
 
-        <p class="role">
-          Odoo Developer Intern – Business Technology Research & Analytics
-          Centre
-        </p>
-        <p class="location">Mar 2024 – Sep 2024 | Kannur, Kerala</p>
-        <ul>
-          <li>Documented software modules and workflows.</li>
-          <li>Contributed to Odoo module customization and testing.</li>
-        </ul>
+        <section>
+          <h2>Training &amp; Certifications</h2>
+          <ul class="compact-list">
+            <li>Optical Fiber Technology &amp; FTTH — BSNL RTTC</li>
+            <li>Geospatial Applications for Disaster Risk Management — Basic &amp; Advanced</li>
+            <li>Prompt Engineering Workshop</li>
+          </ul>
+        </section>
 
-        <p class="role">Technical Apprentice – Keltron Component Complex Ltd</p>
-        <p class="location">Nov 2022 – Nov 2023 | Dharmasala, Kannur</p>
-        <ul>
-          <li>Operated low/high voltage forming machinery in etching plant.</li>
-          <li>
-            Maintained de-ionized water systems and basic electronics in the
-            plant.
-          </li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Education</h2>
-        <p class="role">
-          Diploma in Electronics & Communication Engineering – EKNMMPTC
-        </p>
-        <p class="location">2019 – 2020 | First Class</p>
-
-        <p class="role">
-          Higher Secondary (Biology Science) – EMSSGHSS Pappinisseri
-        </p>
-        <p class="location">2017 – 2019</p>
-      </div>
-
-      <div class="section">
-        <h2>Certificates</h2>
-        <ul>
-          <li>
-            Industrial Training on Optical Fiber Technology and FTTH, BSNL
-            Regional Telecom Training Center TVM
-          </li>
-          <li>
-            Geospatial Application for Disaster Risk Management - Basic &
-            Advanced Module (Massive Open Online Course)
-          </li>
-          <li>Prompt Engineering Workshop</li>
-          <li>Student Police Cadet Certificate</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Languages</h2>
-        <ul>
-          <li>English – Professional Proficiency</li>
-          <li>Malayalam – Native</li>
-          <li>Hindi – Conversational</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Volunteer Experience</h2>
-        <p class="role">Student Police Cadet</p>
-        <p class="location">Jul 2015 – Apr 2016</p>
-        <p>
-          Trained in leadership, civic engagement, and community policing
-          principles.
-        </p>
-      </div>
+        <section>
+          <h2>Education</h2>
+          <div class="education-item"><strong>Diploma in Electronics &amp; Communication Engineering</strong><span>EKNMMPTC, Kannur, Kerala · 2022</span></div>
+          <div class="education-item"><strong>Higher Secondary · Biology Science</strong><span>EMSSGHSS Pappinisseri, Kannur, Kerala · 2019</span></div>
+        </section>
+      </aside>
     </div>
-  </body>
+  </article>
+
+  <details class="contact-menu">
+    <summary aria-label="Open contact options" title="Contact Sarang">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.12 2.8 2 2 0 0 1 3.11.62h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.66 2.62a2 2 0 0 1-.45 2.11L7.05 8.34a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.32 1.72.54 2.62.66A2 2 0 0 1 21 15.5Z"/></svg>
+    </summary>
+    <nav class="contact-links" aria-label="Contact options">
+      <a href="tel:+919526815422">Call</a>
+      <a href="https://wa.me/919526815422" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="mailto:sarusarang02@gmail.com">Email</a>
+    </nav>
+  </details>
+</body>
 </html>
